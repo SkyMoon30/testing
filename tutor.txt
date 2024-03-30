@@ -1,0 +1,109 @@
+a. Merubah Nama
+Untuk merubah nama yang perlu dilakukan diantaranya adalah:
+
+Membuka file index.html, lalu cari kode berikut,
+
+<div class="one">
+    <h1 class="one">
+        Hi
+        <span id="name">Irene</span>
+    </h1>
+    <p class="two" id="greetingText">I really like your name btw!</p>
+</div>
+2. Fokus pada bagian berikut,
+
+
+<span>Irene</span>
+3. Selanjutnya tinggal merubahnya dengan nama yang diinginkan.
+
+b. Cara Merubah Musik
+Untuk merubah musik di belakang layar, bisa dilakukan dengan beberapa langkah berikut:
+
+1. Siapkan file musik yang hendak digunakan.
+
+2. Letakan file musik ke dalam folder music.
+
+3. Setelah itu cari kode berikut,
+
+
+<audio class="song" loop autoplay>
+    <source src="./music/hbd.mpeg">
+    </source>
+    Your browser isn't invited for super fun audio time.
+</audio>
+4. Fokus pada bagian src="..", selanjutnya adalah merubahnya dengan nama file musik yang telah disiapkan sebelumnya. Semisal nama filenya adalah example.mp3, maka akan menjadi sebagai berikut:
+
+
+<source src="./music/example.mp3">
+Catatan: Pastikan extensionnya juga harus sama, semisal .mp3, .mpeg, dsb.
+
+c. Cara Merubah Foto
+Untuk merubah foto, caranya sama seperti merubah musik. Untuk merubah foto bisa dilakukan dengan beberapa langkah berikut:
+
+1. Siapkan foto yang hendak digunakan.
+
+Catatan: Pastikan ukuran foto sudah dicrop menjadi persegi atau rasio 1:1.
+
+2. Letakan foto yang akan digunakan ke dalam folder img.
+
+3. Setelah itu cari kode berikut,
+
+
+<div class="six">
+    <img src="./img/irene.jpg" alt="profile" class="profile-picture" id="imagePath"/>
+    <img src="img/hat.svg" alt="hat" class="hat" />
+    <div class="wish">
+        <h3 class="wish-hbd">Happy Birthday!</h3>
+        <h5 id="wishText">May the js.prototypes always be with you! ;)</h5>
+    </div>
+</div>
+4. Fokus pada bagian,
+
+
+<img src="./img/irene.jpg" alt="profile" class="profile-picture"/>
+5. Pada bagian src="..", selanjutnya adalah merubahnya dengan nama file foto yang telah disiapkan sebelumnya. Semisal nama filenya adalah example.jpg maka akan menjadi sebagai berikut:
+
+
+  <img src="./img/example.jpg" alt="profile" class="profile-picture"/>
+Catatan: Pastikan extensionnya juga sama, semisal .jpg, .png, dsb.
+
+d. Cara Mengatur Durasi Setiap Bagian
+Apabila ada beberapa bagian yang dirasa terlalu cepat atau lambat, maka untuk mengaturnya bisa dilakukan dengan beberapa langkah berikut:
+
+1. Cari kode atau bagian yang akan dirubah di dalam file index.html. Semisal akan merubah durasi bagian kode berikut,
+
+
+<div class="three">
+  <p>It's your birthday!! :D</p>
+</div>
+2. Fokus pada nama classnya, seperti yang terlihat classnya adalah three. Langkah selanjutnya adalah membuka file main.js yang berada di dalam folder script.
+
+3. Cari class tersebut di dalam file main.js, maka akan terlihat sebagai berikut,
+
+
+  .from(".three", 0.7, {
+    opacity: 0,
+    y: 10
+  })
+  .to(".three",
+    0.7,
+    {
+      opacity: 0,
+      y: 10
+    },
+  "+=3")
+4. Fokus pada bagian .to(...),
+
+
+  .to(".three",
+    0.7,
+    {
+      opacity: 0,
+      y: 10
+    },
+  "+=3")
+5. Merubah bagian "+=3" sesuai dengan keinginan. Dengan catatan angka tersebut dalam satuan second atau detik.
+
+"+=3" memiliki arti bahwa adalah element html dengan class three akan ditampilkan selama 3s, sebelum akhirnya menghilang dilanjut bagian selanjutnya.
+
+Catatan: Bisa juga dengan merubah nilainya menjadi minus "-=3", apabila ingin elemen tersebut lebih cepat munculnya atau selesainya dibanding elemen sebelumnya.
